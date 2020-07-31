@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.rating {
+	display: inline-flex;
+	flex-direction: row-reverse;
+}
+
+.rating__item {
+	font-size: 50px;
+	color: grey;
+	cursor: pointer;
+	transition: .3s;
+	-o-transition: .3s;
+	-mozila-transition: .3s;
+	-webkit-transition: .3s;
+}
+
+.rating__item:hover,
+.rating__item:hover ~ .rating__item {
+	color: grey;
+	opacity: .5;
+}
+
+.rating[data-total-value="1"] .rating__item:nth-child(n + 5),
+.rating[data-total-value="2"] .rating__item:nth-child(n + 4),
+.rating[data-total-value="3"] .rating__item:nth-child(n + 3),
+.rating[data-total-value="4"] .rating__item:nth-child(n + 2),
+.rating[data-total-value="5"] .rating__item:nth-child(n + 1) {
+	color: orange;
+} 
+
+.mark {
+	font-size: 30px;
+	font-family: 'Lobster', cursive;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    margin: 0 auto;
+    cursor: pointer;
+}
